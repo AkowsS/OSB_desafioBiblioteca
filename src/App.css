@@ -1,0 +1,92 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(97, 94, 94);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10vw;
+}
+
+h1{
+  text-align: center;
+}
+
+.App form input{
+  background-color:darkgrey;
+
+  border-radius: 8px;
+  padding:5px 10px;
+}
+
+form{
+  display: flex;
+  justify-content: center;
+}
+
+input{
+  border: none;
+  margin: 5px 0;
+  padding: 2px 5px;
+  color: inherit;
+  outline: none;
+  width: 600px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: background-color 0.5s ease-in;
+}
+
+
+.App form input:focus{
+  color: black;
+  background-color: mistyrose;
+}
+
+.separador::after{
+  content: "";
+    display:block;
+    width: 400px;
+    height: 3px;
+    background: white;
+    margin: 14px auto 10px auto;
+}
+
+.search-results ul{
+  height: auto;
+  width: auto;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: darkkhaki;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.livro{
+  margin-left: 30px;
+  list-style: "\1F4D8";
+}
+
+.autor{
+  margin-left: 30px;
+  list-style: '\1F464';
+}
+
+.url{
+  margin-left: 30px;
+  list-style: '\1F517';
+}
+
+.search-results ul:hover{
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: orange;
+  padding: 1.5px;
+}
+
+.search-results ul li span{
+  padding-left: 1ch;
+}
