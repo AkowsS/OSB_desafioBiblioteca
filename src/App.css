@@ -46,7 +46,7 @@ input{
   background-color: mistyrose;
 }
 
-.separador::after{
+.separator::after{
   content: "";
     display:block;
     width: 400px;
@@ -65,12 +65,12 @@ input{
   margin-bottom: 20px;
 }
 
-.livro{
+.title{
   margin-left: 30px;
   list-style: "\1F4D8";
 }
 
-.autor{
+.author{
   margin-left: 30px;
   list-style: '\1F464';
 }

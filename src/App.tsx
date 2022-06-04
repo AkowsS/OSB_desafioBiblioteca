@@ -1,6 +1,6 @@
-import {useState} from 'react';
-import './App.css';
-import SearchResults from './SearchResults/index';
+import {useState} from "react";
+import "./App.css";
+import SearchResults from "./SearchResults/";
 
 //https://hn.algolia.com/api/v1/search?query=chave
 function App() {
@@ -8,7 +8,6 @@ function App() {
   const[hits,setHits] = useState([]);
 
   const handleInputChange = (e:any) =>{
-    e.preventDefault();
     const {value} = e.target;
 
     const url = `https://hn.algolia.com/api/v1/search?query=${value}`;
@@ -18,22 +17,16 @@ function App() {
     .then((hits) => setHits(hits));
   };
 
-  console.log('handle: ',hits)
-
-  return (
+  return(
     <div className="App">
       <h1>Biblioteca</h1>
-      <div className="separador">
+      <div className="separator">
         <form>
-          <input type="search" id="search" className="inp" onChange={handleInputChange} />
+          <input type="text" id="search" placeholder="Informe a pesquisa..." onChange={handleInputChange}/>
         </form>
       </div>
-      
       <SearchResults data = {hits}/>
-      
-
     </div>
   );
 };
-
 export default App;
